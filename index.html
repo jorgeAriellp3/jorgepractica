@@ -3,25 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenida Jorge</title>
+  <title>Página de Jorge</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+      font-size: 1.5em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: fadeInDown 2s ease;
     }
 
     h1 {
       font-size: 3em;
-      color: white;
-      position: relative;
       text-transform: uppercase;
       letter-spacing: 4px;
       animation: glow 2s ease-in-out infinite alternate;
+      position: relative;
     }
 
     @keyframes glow {
@@ -44,9 +56,31 @@
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
+
+    footer {
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+      font-size: 0.9em;
+      letter-spacing: 1px;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
+  <header>Bienvenido a la página de Jorge</header>
   <h1>Jorge Brizuela te saluda</h1>
+  <footer>© 2026 Jorge Brizuela | Proyecto en GitHub Pages</footer>
 </body>
 </html>
